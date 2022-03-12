@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #5a4b53;
+  height: 100vh;
+  display: flex;
+}
+.memory-game {
+  width: 600px;
+  height: 600px;
+  height: 600px;
+  background-color: rgba(25, 14, 85, 0.479);
+  background: linear-gradient(#52cd99,#e52522);
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  border: 2px solid #222;
+  perspective: 1500px;
+}
+.memory-card {
+  background-color: #00f;
+  background-image: url("../imagesvs/scenery4.jpg");
+  background-size: cover;
+  width: 18.5%;
+  height: 23%;
+  position: relative;
+  
+  border-radius: 10px;
+  margin: 3px;
+  transform: scale(0.97);
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+.memory-card:hover {
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+.front-img,
+.back-img {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front-img {
+  background-color: #ddd;
+  border: 3px solid #222;
+  transform: rotateY(180deg);
+}
+
+#btn {
+  width: 400px;
+  height: 180px;
+  font-size: 19px;
+  color: #111;
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  text-shadow: 2px 2px #aaa;
+  top: 30%;
+
+  left: 15%;
+  z-index: 10;
+  background-color: rgb(253, 255, 251);
+}
+span {
+  font-size: 22px;
+}
+#btn.moveout {
+  display: none;
+}
+
+#slidebar {
+  position: absolute;
+  top: 20vh;
+  color: #fff;
+  text-align: center;
+  background-color: rgb(219, 5, 5);
+  border: 3px solid #222;
+  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+  display: none;
+}
+#slidebar.slide {
+  display: block;
+  z-index: 1;
+}
+.cooked-chicken {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+}
+h2 {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .memory-card {
+    width: 22%;
+    height: 19%;
+  }
+}

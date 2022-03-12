@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hungry Wolf - Memory Card Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="favicon icon" href="#">
+
+  </head>
+  <body>
+    <audio id="got_chicken" src="./audios/got_chicken.wav"></audio>
+    <audio id="check_chicken" src="./audios/check_chicken.wav"></audio>
+
+    <div class="memory-game">
+      <div class="memory-card" data-name="chickenseven">
+        <img class="front-img" src="../imagesvs/chicken7.png" alt="chicken7" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+      <div class="memory-card" data-name="chickenseven">
+        <img class="front-img" src="../imagesvs/chicken7.png" alt="chicken7" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickeneight">
+        <img class="front-img" src="../imagesvs/chicken8.png" alt="chicken8" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickeneight">
+        <img class="front-img" src="../imagesvs/chicken8.png" alt="chicken8" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickennine">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken9.png"
+          alt="chicken9.png"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickennine">
+        <img class="front-img" src="../imagesvs/chicken9.png" alt="chicken9" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickenfour">
+        <img class="front-img" src="../imagesvs/chicken4.png" alt="chicken4" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickenfour">
+        <img class="front-img" src="../imagesvs/chicken4.png" alt="chicken4" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickenfive">
+        <img class="front-img" src="../imagesvs/chicken5.png" alt="chicken5" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickenfive">
+        <img class="front-img" src="../imagesvs/chicken5.png" alt="chicken5" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickensix">
+        <img class="front-img" src="../imagesvs/chicken6.png" alt="chicken6" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chickensix">
+        <img class="front-img" src="../imagesvs/chicken6.png" alt="chicken6" />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken12">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken12.png"
+          alt="chicken12"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken12">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken12.png"
+          alt="chicken12"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken13">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken13.png"
+          alt="chicken13"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken13">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken13.png"
+          alt="chicken13"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken16">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken16.png"
+          alt="chicken16"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken16">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken16.png"
+          alt="chicken16"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken18">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken18.png"
+          alt="chicken18"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <div class="memory-card" data-name="chicken18">
+        <img
+          class="front-img"
+          src="../imagesvs/chicken18.png"
+          alt="chicken18"
+        />
+        <img class="back-img" src="./imgs/wolf1.png" alt="wolf1" />
+      </div>
+
+      <button id="btn">
+        <h2><span id="title"
+          >HUNGRY LIKE THE WOLF? <br />Find the same chicken!</span
+        ></h2><br /><br />Click or Press Spacebar To Start!
+      </button>
+
+      <div id="slidebar">
+        <h2>Fried or Roasted?</h2>
+
+        <img class="cooked-chicken" src="../imagesvs/fried_chicken.png" />
+        <img class="cooked-chicken" src="../imagesvs/roastchiken.png" />
+        <h3>Enjoy!! Click for more chicken.</h3>
+      </div>
+    </div>
+    <script type="text/javascript" src="setup.js"></script>
+    <script type="text/javascript" src="card.js"></script>
+  </body>
+</html>

@@ -18,6 +18,7 @@ function flipCard(){
    
     this.classList.add('flip');
     checkChicken.play();
+    checkChicken.currentTime = 0;
     checkChicken.volume = 0.2;
     if(!hasFlipped){
         hasFlipped = true;
@@ -38,7 +39,8 @@ function disableFlip(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     gotChicken.play();
-    gotChicken.volume = 0.15;
+    gotChicken.currentTime = 0;
+    gotChicken.volume = 0.25;
     count++;
     resetBoard();
 

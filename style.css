@@ -24,7 +24,6 @@ body {
 }
 .memory-card {
   background-color: #00f;
-  background-image: url("../imagesvs/scenery4.jpg");
   background-size: cover;
   width: 18.5%;
   height: 23%;
@@ -67,12 +66,12 @@ body {
   position: absolute;
   border-radius: 10px;
   padding: 10px;
-  text-shadow: 2px 2px #aaa;
+  text-shadow: 2px 2px 3px rgb(34. 34, 34);
   top: 30%;
 
-  left: 15%;
+  left: 12%;
   z-index: 10;
-  background-color: rgb(253, 255, 251);
+  background-color: rgba(12, 12, 12, 0.6);
 }
 span {
   font-size: 22px;

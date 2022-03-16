@@ -100,12 +100,12 @@ span {
   left: -50%;
   color: #fff;
   text-align: center;
-  background-color: rgb(110, 165, 9);
+  background-color: rgba(110, 165, 9, .7);
   text-shadow: 2px 2px rgb(17, 15, 15);
   border: 1px solid #222;
   border-radius: 10px;
   width: 0%;
-  height: 300px;
+  height: 80%;
   transition: width .85s;
   /* display: none; */
 }

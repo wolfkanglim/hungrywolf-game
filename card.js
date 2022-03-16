@@ -2,7 +2,7 @@ const memoryCard = document.querySelectorAll('.memory-card');
 
 function startGame(){
     shuffle();    
-   
+    timerStart();
 let hasFlipped = false;
 let firstCard;
 let secondCard;
@@ -46,6 +46,7 @@ function disableFlip(){
 
     if(count === 10){
         congrat();
+        timerStop();
     }
 }
 
@@ -80,4 +81,59 @@ memoryCard.forEach(card => card.addEventListener('click', flipCard));
 
 function reset(){
     memoryCard.forEach(card => {card.classList.remove('flip');})
+    timerReset();
+}
+
+/////timer setup//////
+ const timer = document.getElementById('timer');
+ let hr = 0;
+ let min = 0;
+ let sec = 0;
+ let stopTimer = true;
+//timer start
+function timerStart(){
+    if(stopTimer == true){
+        timerCycle();
+        stopTimer = false;
+    }
+    console.log(timer);
+}
+//timer stop
+function timerStop(){
+    if(stopTimer == false){
+        stopTimer = true;
+    }
+}
+//timer cycle
+function timerCycle(){
+    if(stopTimer == false){
+        sec = parseInt(sec);
+        min = parseInt(min);
+        hr = parseInt(hr);
+
+        sec = sec + 1;
+
+        if(sec == 60) {
+        min += 1;
+        sec = 0;
+        }
+        if(min == 60){
+            hr += 1;
+            min = 0;
+        }
+        sec < 10 || sec == 0? sec = '0' + sec: sec = sec;
+        min < 10 ? min = '0' + min: min = min;
+        hr < 10 ? hr = '0' + hr: hr = hr;
+        timer.innerHTML = hr +':' + min + ':' + sec;
+
+    }    
+    setTimeout(timerCycle, 1000);
+}
+//timer reset
+function timerReset(){
+    timer.innerHTML = '00:00:00';
+    sec = 0;
+    min = 0;
+    hr = 0;
+    stopTimer = true;
 }

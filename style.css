@@ -13,6 +13,7 @@ body {
 h2, h5 {
   color: #fff;  
   margin-top: 12px;
+  text-align: center;
 }
 h5 {
   margin-top: 0;
@@ -85,7 +86,7 @@ h5 {
   top: 20%;
   left: 0%;
   z-index: 10;
-  background-color: rgba(219, 5, 5, 0.7);
+  background-color: rgba(119, 105, 5, 0.7);
 }
 span {
   font-size: 22px;

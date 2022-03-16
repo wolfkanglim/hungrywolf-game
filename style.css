@@ -11,8 +11,7 @@ body {
   justify-content: center;
 }
 h2, h5 {
-  color: #fff;
-  text-align: center;
+  color: #fff;  
   margin-top: 12px;
 }
 h5 {
@@ -22,6 +21,7 @@ h5 {
   width: 80%;
   height: 100vh;
   margin: 0 auto;
+  text-align: center;
 }
 .memory-game {
   max-width: 900px;

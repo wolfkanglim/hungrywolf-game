@@ -84,56 +84,46 @@ function reset(){
     timerReset();
 }
 
-/////timer setup//////
  const timer = document.getElementById('timer');
- let hr = 0;
- let min = 0;
- let sec = 0;
- let stopTimer = true;
-//timer start
+/////Timer setup Date.now()/////
+function timerCycle(time){
+    let hrs = time / 3600000;
+    let hh = Math.floor(hrs);
+    let min = (hrs - hh) * 60;
+    let mm = Math.floor(min);
+    let sec = (min - mm) * 60;
+    let ss = Math.floor(sec);
+    let msec = (sec- ss) * 100;
+    let ms = Math.floor(msec);
+
+    let formattedHH = hh.toString().padStart(2, "0");
+    let formattedMM = mm.toString().padStart(2, "0");
+  let formattedSS = ss.toString().padStart(2, "0");
+  let formattedMS = ms.toString().padStart(2, "0");
+  return `${formattedHH}:${formattedMM}:${formattedSS}:${formattedMS}`;
+}
+
+function print(txt){
+    timer.innerHTML = txt;
+}
+let startTime;
+let elapsedTime = 0
+let timerInterval;
+
 function timerStart(){
-    if(stopTimer == true){
-        timerCycle();
-        stopTimer = false;
-    }
-    console.log(timer);
+    startTime = Date.now() - elapsedTime;
+    timerInterval = setInterval(() => {
+        elapsedTime = Date.now() - startTime;           
+        print(timerCycle(elapsedTime));
+    }, 10);
 }
-//timer stop
+
 function timerStop(){
-    if(stopTimer == false){
-        stopTimer = true;
-    }
+    clearInterval(timerInterval);
 }
-//timer cycle
-function timerCycle(){
-    if(stopTimer == false){
-        sec = parseInt(sec);
-        min = parseInt(min);
-        hr = parseInt(hr);
 
-        sec = sec + 1;
-
-        if(sec == 60) {
-        min += 1;
-        sec = 0;
-        }
-        if(min == 60){
-            hr += 1;
-            min = 0;
-        }
-        sec < 10 || sec == 0? sec = '0' + sec: sec = sec;
-        min < 10 ? min = '0' + min: min = min;
-        hr < 10 ? hr = '0' + hr: hr = hr;
-        timer.innerHTML = hr +':' + min + ':' + sec;
-
-    }    
-    setTimeout(timerCycle, 1000);
-}
-//timer reset
 function timerReset(){
-    timer.innerHTML = '00:00:00';
-    sec = 0;
-    min = 0;
-    hr = 0;
-    stopTimer = true;
+    clearInterval(timerInterval);
+    timer.innerHTML = '00:00:00:00';
+    elapsedTime = 0;
 }

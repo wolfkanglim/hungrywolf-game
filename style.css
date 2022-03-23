@@ -18,6 +18,7 @@ h5 {
 .container {
   width: 80%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   margin: 0 auto;
 }
 .memory-game {

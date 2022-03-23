@@ -38,9 +38,8 @@ h5 {
   perspective: 1500px;
 }
 .memory-card {
-  background-color: #00f;
-  background-image: url("../imagesvs/scenery4.jpg");
-  background-size: cover;
+  background-color: #00f;  
+  
   box-shadow: 2px 2px 2px #222;
   max-width: 120px;
   /* width:110px;
